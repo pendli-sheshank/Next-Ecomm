@@ -12,7 +12,8 @@ const HeroBanner = ({ heroBanner }) => {
       <div>
         <p className="beats-solo">{heroBanner.smallText}</p>
         <h3>{heroBanner.midText}</h3>
-        <h1>{heroBanner.largeText}</h1>
+        <h1>{heroBanner.largeText1}</h1>
+
         {heroBanner && (
           <img
             src={urlFor(heroBanner.image).url()}

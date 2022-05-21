@@ -6,15 +6,17 @@ const index = ({ products, bannerData }) => {
   console.log(products, bannerData);
   return (
     <>
-      <HeroBanner heroBanner={bannerData.length & bannerData[0]} />
+      <HeroBanner heroBanner={bannerData[0]} />
       <div className="products-heading">
         <h2>Best Selling Products</h2>
         <p>Speakers of many variations</p>
       </div>
       <div className="products-container">
-        {["product 1", "product 2"].map((product) => product)}
+        {products?.map((product) => (
+          <Product key={product._id} product={product} />
+        ))}
       </div>
-      <FooterBanner />
+      <FooterBanner footerBanner={bannerData && bannerData[0]} />
     </>
   );
 };
